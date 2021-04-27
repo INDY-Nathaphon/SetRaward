@@ -10,7 +10,7 @@ const exec = {
             'https://kovan.infura.io/v3/15ce6797248643989c8b2b44aa15df19'
         );
         const contract = new ethers.Contract(
-            '0x7ED755b492B0e342Ab1ac24eEcE1A4dC3328De5F',
+            '0xD8b01EbC76278d4DA891CE77c4C416c362886003',
             require('./abis/ChokchanaLottery.json'),
             provider
         );
@@ -19,7 +19,7 @@ const exec = {
             provider
         );
         const contractWithSigner = contract.connect(signer);
-        const result = await contractWithSigner.setReward(rank, data);
+        const result = await contractWithSigner.setRewardNumber(rank, data);
         console.log(result);
 		return result;
 	},
@@ -28,7 +28,7 @@ const exec = {
             'https://kovan.infura.io/v3/15ce6797248643989c8b2b44aa15df19'
         );
         const contract = new ethers.Contract(
-            '0x7ED755b492B0e342Ab1ac24eEcE1A4dC3328De5F',
+            '0xD8b01EbC76278d4DA891CE77c4C416c362886003',
             require('./abis/ChokchanaLottery.json'),
             provider
         );

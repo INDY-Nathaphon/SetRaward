@@ -121,6 +121,19 @@
 		"type": "function"
 	},
 	{
+		"inputs": [],
+		"name": "getCurRound",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
 		"inputs": [
 			{
 				"internalType": "uint8",
@@ -204,6 +217,24 @@
 			}
 		],
 		"name": "setReward",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint8",
+				"name": "rank",
+				"type": "uint8"
+			},
+			{
+				"internalType": "uint256",
+				"name": "number",
+				"type": "uint256"
+			}
+		],
+		"name": "setRewardNumber",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
