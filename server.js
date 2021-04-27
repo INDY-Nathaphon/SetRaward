@@ -66,6 +66,10 @@ app.get('/post0/:id', async (req, res) => {
 	const products = await exec.setRewardNumber(0,data);
 	res.json(products);
 });
+app.get('/', async (req, res) => {
+	const products = "For Post Reward to chain"
+	res.send(products);
+});
 app.get('/post1/:id', async (req, res) => {
     const { id } = req.params;
     let data = parseInt(id)
