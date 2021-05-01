@@ -19,6 +19,42 @@ app.post('/rewards', async (req, res) => {
 		res.status(400).json(error);
 	}
 });
+app.post('/rewards/1', async (req, res) => {
+	const payload = req.body;
+	try {
+		R = parseInt(1);
+		D = parseInt(payload.number);
+		const output1 = await exec.setRewardNumber(R, D);
+		res.json({ status: 'success', rank: R, number: D, data: output1 });
+		res.status(200);
+	} catch (error) {
+		res.status(400).json(error);
+	}
+});
+app.post('/rewards/2', async (req, res) => {
+	const payload = req.body;
+	try {
+		R = parseInt(2);
+		D = parseInt(payload.number);
+		const output1 = await exec.setRewardNumber(R, D);
+		res.json({ status: 'success', rank: R, number: D, data: output1 });
+		res.status(200);
+	} catch (error) {
+		res.status(400).json(error);
+	}
+});
+app.post('/rewards/3', async (req, res) => {
+	const payload = req.body;
+	try {
+		R = parseInt(3);
+		D = parseInt(payload.number);
+		const output1 = await exec.setRewardNumber(R, D);
+		res.json({ status: 'success', rank: R, number: D, data: output1 });
+		res.status(200);
+	} catch (error) {
+		res.status(400).json(error);
+	}
+});
 app.get('/rewards', async (req, res) => {
 	const payload = req.body;
 	try {
