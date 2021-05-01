@@ -7,6 +7,14 @@ app.use(express.json());
 const exec = require('./exec');
 const random = require('./setRandom');
 //เพิ่มรางวัล
+app.get('/', async (req, res) => {
+	try {
+		res.send("index");
+		res.status(200);
+	} catch (error) {
+		res.status(400).json(error);
+	}
+});
 app.post('/rewards', async (req, res) => {
 	const payload = req.body;
 	try {
