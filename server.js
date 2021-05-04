@@ -94,6 +94,54 @@ app.get('/rewards', async (req, res) => {
 		res.status(400).json(error);
 	}
 });
+app.get('/rewards/1/:round', async (req, res) => {
+	const { round } = req.params;
+	try {
+		R = parseInt(round);
+		D = parseInt(1);
+		const output1 = await exec.getReward(R, D);
+		res.status(200).json({
+			status: 'success',
+			round: R,
+			rank: D,
+			data: output1,
+		});
+	} catch (error) {
+		res.status(400).json(error);
+	}
+});
+app.get('/rewards/2/:round', async (req, res) => {
+	const { round } = req.params;
+	try {
+		R = parseInt(round);
+		D = parseInt(1);
+		const output1 = await exec.getReward(R, D);
+		res.status(200).json({
+			status: 'success',
+			round: R,
+			rank: D,
+			data: output1,
+		});
+	} catch (error) {
+		res.status(400).json(error);
+	}
+});
+app.get('/rewards/3/:round', async (req, res) => {
+	const { round } = req.params;
+	try {
+		R = parseInt(round);
+		D = parseInt(1);
+		const output1 = await exec.getReward(R, D);
+		res.status(200).json({
+			status: 'success',
+			round: R,
+			rank: D,
+			data: output1,
+		});
+	} catch (error) {
+		res.status(400).json(error);
+	}
+});
 app.put('/rewards', async (req, res) => {
 	const payload = req.body;
 	try {
