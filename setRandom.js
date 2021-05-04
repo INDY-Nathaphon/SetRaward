@@ -1,7 +1,7 @@
 const { ethers } = require('ethers');
-const INFURA_SECRET_KEY = process.env.INFURA_SECRET_KEY || require('./config');
-const WALLET_SECRET_KEY = process.env.WALLET_SECRET_KEY || require('./config');
-const ETHERS_CONTRACT_KEY =
+const {INFURA_SECRET_KEY} = process.env.INFURA_SECRET_KEY || require('./config');
+const {WALLET_SECRET_KEY} = process.env.WALLET_SECRET_KEY || require('./config');
+const {ETHERS_CONTRACT_RANDOM_KEY} =
 	process.env.ETHERS_CONTRACT_KEY || require('./config');
 module.exports = {
 	async drawRandomReward() {
@@ -9,7 +9,7 @@ module.exports = {
 			`https://kovan.infura.io/v3/${INFURA_SECRET_KEY}`
 		);
 		const contract = new ethers.Contract(
-			ETHERS_CONTRACT_KEY,
+			ETHERS_CONTRACT_RANDOM_KEY,
 			require('./abis/RandomGenerator.json'),
 			provider
 		);
