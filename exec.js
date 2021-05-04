@@ -1,8 +1,8 @@
-const {INFURA_SECRET_KEY} = process.env.INFURA_SECRET_KEY || require('./config');
-const {WALLET_SECRET_KEY} = process.env.WALLET_SECRET_KEY || require('./config');
-const {ETHERS_CONTRACT_KEY} =
+const INFURA_SECRET_KEY = process.env.INFURA_SECRET_KEY || require('./config');
+const WALLET_SECRET_KEY = process.env.WALLET_SECRET_KEY || require('./config');
+const ETHERS_CONTRACT_KEY =
 	process.env.ETHERS_CONTRACT_KEY || require('./config');
-const { ethers } = require('ethers');
+const  ethers  = require('ethers');
 module.exports = {
 	async setRewardNumber(rank, data) {
 		const provider = new ethers.providers.JsonRpcProvider(
