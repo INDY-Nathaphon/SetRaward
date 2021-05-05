@@ -2,7 +2,7 @@ const { ethers } = require('ethers');
 const INFURA_SECRET_KEY = process.env.INFURA_SECRET_KEY || require('./config');
 const WALLET_SECRET_KEY = process.env.WALLET_SECRET_KEY || require('./config');
 const ETHERS_CONTRACT_RANDOM_KEY =
-	process.env.ETHERS_CONTRACT_KEY || require('./config');
+	process.env.ETHERS_CONTRACT_RANDOM_KEY || require('./config');
 module.exports = {
 	async drawRandomReward() {
 		const provider = new ethers.providers.JsonRpcProvider(
