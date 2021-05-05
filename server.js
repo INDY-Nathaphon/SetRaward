@@ -114,7 +114,7 @@ app.get('/rewards/2/:round', async (req, res) => {
 	const { round } = req.params;
 	try {
 		R = parseInt(round);
-		D = parseInt(1);
+		D = parseInt(2);
 		const output1 = await exec.getReward(R, D);
 		res.status(200).json({
 			status: 'success',
@@ -130,7 +130,7 @@ app.get('/rewards/3/:round', async (req, res) => {
 	const { round } = req.params;
 	try {
 		R = parseInt(round);
-		D = parseInt(1);
+		D = parseInt(3);
 		const output1 = await exec.getReward(R, D);
 		res.status(200).json({
 			status: 'success',
